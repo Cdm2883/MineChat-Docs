@@ -2,7 +2,7 @@
 
 * [MineChat](README.md)
 
-## 用户指南 {id="a"}
+## 用户指南 {a}
 
 * [快速开始](usage/getting-started.md)
 * [常见问题](usage/faq.md)
