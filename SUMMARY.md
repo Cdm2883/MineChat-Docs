@@ -1,7 +1,6 @@
 # Table of contents
 
-* [🥳 Test](README.md)
-* [MineChat](<README (1).md>)
+* [MineChat](README.md)
 
 ## 用户指南 <a href="#usage" id="usage"></a>
 
