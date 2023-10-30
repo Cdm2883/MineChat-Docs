@@ -4,6 +4,11 @@
 
 ## 用户指南 <a href="#usage" id="usage"></a>
 * [快速开始](usage/getting-started.md)
+* [服务器列](usage/manage-servers.md)
+* [聊天界面](usage/chatting.md)
+* [管理插件](usage/manage-plugins.md)
+* [管理账户](usage/manage-accounts.md)
+* [管理文件](usage/manage-files.md)
 * [常见问题](usage/faq.md)
 
 ## 内置插件 <a href="#builtin" id="builtin"></a>
