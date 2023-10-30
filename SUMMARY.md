@@ -35,6 +35,7 @@
 * [协议提供](plugin/protocol-provider.md)
 * [协议扩展](plugin/protocol-extension.md)
 * [软件服务](plugin/service-extension.md)
+* [脚本系统](plugin/script.md)
 * [其他资料](plugin/other-information.md)
 
 ## 脚本开发 <a href="#script" id="script"></a>
