@@ -38,19 +38,3 @@ layout:
 | [MineChat](https://github.com/Cdm2883/MineChat)           | 项目主仓库          |
 | [MineChat Docs](https://github.com/Cdm2883/MineChat-Docs) | Gitbook文档 (本站) |
 | [MineChat Res](https://pan.qingfong.com:666/s/m0MuD)      | 项目资源网盘         |
-
-<script src="https://giscus.app/client.js"
-        data-repo="Cdm2883/MineChat-Docs"
-        data-repo-id="R_kgDOKmhpWg"
-        data-category="Page comments"
-        data-category-id="DIC_kwDOKmhpWs4Cajje"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="preferred_color_scheme"
-        data-lang="zh-CN"
-        crossorigin="anonymous"
-        async>
-</script>
