@@ -1,6 +1,7 @@
 ---
 description: \[内置\]
 ---
+
 # 协议提供服务器
 
 ```mermaid
@@ -10,4 +11,9 @@ sequenceDiagram
     participant server as 游戏服务器
     
     plugin ->> protocol_server: ...
+```
+
+```mermaid
+graph TD
+  Mermaid --> Diagram
 ```
