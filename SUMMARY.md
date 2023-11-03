@@ -2,42 +2,42 @@
 
 * [MineChat](README.md)
 
-## 用户指南 <a href="#usage" id="usage"></a>
+## USER GUIDE <a href="#usage" id="usage"></a>
 
-* [快速开始](usage/getting-started.md)
-* [服务器列](usage/manage-servers.md)
-* [聊天界面](usage/chatting.md)
-* [管理插件](usage/manage-plugins.md)
-* [管理账户](usage/manage-accounts.md)
-* [管理文件](usage/manage-files.md)
-* [常见问题](usage/faq.md)
+* [Quick Start](usage/getting-started.md)
+* [Manage Servers](usage/manage-servers.md)
+* [Chatting](usage/chatting.md)
+* [Manage Plugins](usage/manage-plugins.md)
+* [Manage Accounts](usage/manage-accounts.md)
+* [Manage Files](usage/manage-files.md)
+* [FAQ](usage/faq.md)
 
-## 内置插件 <a href="#builtin" id="builtin"></a>
+## BUILT-IN PLUGINS <a href="#builtin" id="builtin"></a>
 
-* [协议提供](builtin/protocol/README.md)
-  * [协议提供服务器](builtin/protocol/protocol-server.md)
+* [Protocol Provider](builtin/protocol/README.md)
+  * [Protocol Provider Servers](builtin/protocol/protocol-server.md)
   * [CloudburstMC/Protocol](builtin/protocol/cloudburstmc-protocol.md)
   * [GeyserMC/MCProtocolLib](builtin/protocol/geysermc-mcprotocollib.md)
-  * [调试控制台](builtin/protocol/debug-console.md)
-* [协议扩展](builtin/extension/README.md)
-  * [图片发送](builtin/extension/image-sender.md)
-  * [应用功能扩展](builtin/extension/mine-chat-plus.md)
-* [软件服务](builtin/service/README.md)
-  * [Node.js 运行时](builtin/service/nodejs-service.md)
+  * [Debug Console](builtin/protocol/debug-console.md)
+* [Protocol Extension](builtin/extension/README.md)
+  * [Image Sender](builtin/extension/image-sender.md)
+  * [MineChat+](builtin/extension/mine-chat-plus.md)
+* [Service Extension](builtin/service/README.md)
+  * [Node.js Runtime](builtin/service/nodejs-service.md)
 
-## 插件开发 <a href="#plugin" id="plugin"></a>
+## PLUGIN DEVELOPMENT <a href="#plugin" id="plugin"></a>
 
-* [准备工作](plugin/preparations.md)
-* [快速开始](plugin/getting-started.md)
-* [软件架构](plugin/app-structure.md)
-* [插件系统](plugin/plugin-system.md)
-* [插件结构](plugin/plugin-structure.md)
-* [协议提供](plugin/protocol-provider.md)
-* [协议扩展](plugin/protocol-extension.md)
-* [软件服务](plugin/service-extension.md)
-* [脚本系统](plugin/script.md)
-* [其他资料](plugin/other-information.md)
+* [Preparation](plugin/preparations.md)
+* [Quick Start](plugin/getting-started.md)
+* [App Structure](plugin/app-structure.md)
+* [Plugin System](plugin/plugin-system.md)
+* [Plugin Structure](plugin/plugin-structure.md)
+* [Protocol Provider](plugin/protocol-provider.md)
+* [Protocol Extension](plugin/protocol-extension.md)
+* [Service Extension](plugin/service-extension.md)
+* [Script System](plugin/script.md)
+* [Other Information](plugin/other-information.md)
 
-## 脚本开发 <a href="#script" id="script"></a>
+## SCRIPT DEVELOPMENT <a href="#script" id="script"></a>
 
-* [暂未开放](script/not-available.md)
+* [Not Available](script/not-available.md)
