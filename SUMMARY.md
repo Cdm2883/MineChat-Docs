@@ -6,7 +6,7 @@
 
 * [Quick Start](usage/getting-started.md)
 * [Manage Servers](usage/manage-servers.md)
-* [Chatting](usage/chatting.md)
+* [Chat Interface](usage/chatting.md)
 * [Manage Plugins](usage/manage-plugins.md)
 * [Manage Accounts](usage/manage-accounts.md)
 * [Manage Files](usage/manage-files.md)
@@ -29,7 +29,7 @@
 
 * [Preparation](plugin/preparations.md)
 * [Quick Start](plugin/getting-started.md)
-* [App Structure](plugin/app-structure.md)
+* [Application Structure](plugin/app-structure.md)
 * [Plugin System](plugin/plugin-system.md)
 * [Plugin Structure](plugin/plugin-structure.md)
 * [Protocol Provider](plugin/protocol-provider.md)
