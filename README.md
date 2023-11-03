@@ -34,7 +34,7 @@ layout:
 
 #### ⛳ 导航
 | Name                                                      | Description    |
-| --------------------------------------------------------- | -------------- |
+|-----------------------------------------------------------|----------------|
 | [MineChat](https://github.com/Cdm2883/MineChat)           | 项目主仓库          |
 | [MineChat Docs](https://github.com/Cdm2883/MineChat-Docs) | Gitbook文档 (本站) |
 | [MineChat Res](https://pan.qingfong.com:666/s/m0MuD)      | 项目资源网盘         |
