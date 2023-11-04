@@ -27,7 +27,6 @@ sequenceDiagram
 
 <summary>储存结构</summary>
 
-{% code fullWidth="false" %}
 ```json5
 {
     host: 'string',
@@ -38,12 +37,11 @@ sequenceDiagram
     options: {}
 }
 ```
-{% endcode %}
 
 </details>
 
 | 名称      | 默认值              | 附加信息 |
-| ------- | ---------------- | ---- |
+|---------|------------------|------|
 | 协议提供服务器 |                  |      |
 | 连接账户    |                  |      |
 | 显示名称    | Minecraft Server |      |
@@ -128,10 +126,10 @@ sequenceDiagram
 {% swagger-response status="200: OK" description="成功" %}
 ```json5
 {
-    summary: 'string',  // 服务器总结信息
-    delay: 'number',    // 服务延迟
-    count: 'string',    // 服务人数信息
-    icon: 'string'      // 服务器base64图标 (nullable)
+    summary: 'string',   // 服务器总结信息
+    delay: 'number',     // 服务延迟
+    count: 'string',     // 服务人数信息
+    icon: 'string|null'  // 服务器base64图标
 }
 ```
 {% endswagger-response %}
