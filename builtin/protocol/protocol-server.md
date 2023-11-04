@@ -22,9 +22,8 @@ sequenceDiagram
 ```
 
 ## 📝 添加服务器
-
 | 名称      | 默认值              | 附加信息 |
-| ------- | ---------------- | ---- |
+|---------|------------------|------|
 | 协议提供服务器 |                  |      |
 | 连接账户    |                  |      |
 | 显示名称    | Minecraft Server |      |
@@ -46,7 +45,7 @@ sequenceDiagram
 
 ### 开发协议提供服务器
 
-协议提供服务器使用http, 使得可以让开发不局限于Java\
+协议提供服务器使用http, 使得可以让开发不局限于Java  
 你可以自行实现以下接口, 实现你自己的协议提供服务器!
 
 ```mermaid
@@ -57,6 +56,24 @@ sequenceDiagram
     participant plugin as 协议提供服务器插件
     participant protocol_server as 协议提供服务器
     participant server as 游戏服务器
+    
+    plugin ->>+ protocol_server: 检查状态
+    Note over plugin, protocol_server: GET /info
+    protocol_server -->>- plugin: 返回信息
+    
+    plugin ->>+ protocol_server: 创建会话
+    Note over plugin, protocol_server: POST /session
+    protocol_server -->>- plugin: 返回会话ID
+
+    plugin -> protocol_server: 建立WS连接
+    Note over plugin, protocol_server: WS /session/<ID>
+
+    plugin ->> protocol_server: 绑定基本事件
+    loop 排队
+        plugin ->> protocol_server: 请求开启游戏服务器连接
+    end
+
+    protocol_server -> server: 建立连接
 ```
 
 #### 基本接口
