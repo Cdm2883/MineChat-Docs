@@ -23,31 +23,18 @@ sequenceDiagram
 
 ## 📝 添加服务器
 
-| 名称      | 默认值              | 附加信息 |
-| ------- | ---------------- | ---- |
-| 协议提供服务器 |                  |      |
-| 连接账户    |                  |      |
-| 显示名称    | Minecraft Server |      |
-| 地址      | 127.0.0.1        |      |
-| 端口      | 19132            |      |
-| 会话附加属性  |                  |      |
-
 ## 🎲 插件配置页
 
 ## 🔧 开发者资源
 
 ### 向插件发送包
-
 ...
 
 ### 添加事件监听
-
 ...
 
 ### 开发协议提供服务器
-
-
-
+#### 基本接口
 {% swagger expanded="false" method="get" path="/info" baseUrl="http://<HOST>:<PORT>" summary="获取协议提供服务器信息" %}
 {% swagger-description %}
 用于获取当前协议提供服务器信息
@@ -56,11 +43,11 @@ sequenceDiagram
 {% swagger-response status="200: OK" description="成功" %}
 ```json5
 {
-    description: string,          // 描述文本
-    backend: string,              // 后端实现
-    online: number,               // 在线连接数
-    bedrock_protocols: [number],  // 支持的基岩版协议列表
-    java_protocols: [number]      // 支持的Java版协议列表
+    description: 'string',          // 描述文本
+    backend: 'string',              // 后端实现
+    online: 'number',               // 在线连接数
+    bedrock_protocols: ['number'],  // 支持的基岩版协议列表
+    java_protocols: ['number']      // 支持的Java版协议列表
 }
 ```
 {% endswagger-response %}
@@ -80,7 +67,14 @@ sequenceDiagram
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="成功" %}
-
+```json5
+{
+    summary: 'string',  // 服务器总结信息
+    delay: 'number',    // 服务延迟
+    count: 'string',    // 服务人数信息
+    icon: 'string'      // 服务器base64图标 (nullable)
+}
+```
 {% endswagger-response %}
 {% endswagger %}
 
@@ -89,7 +83,17 @@ sequenceDiagram
 只是带上配置尝试创建一个会话, 此时还未与游戏服务器连接
 {% endswagger-description %}
 
-{% swagger-response status="200: OK" description="" %}
-
+{% swagger-response status="200: OK" description="成功" %}
+```json5
+{
+    code: 0,
+    message: "success",
+    data: {
+        session_id: 'string'  // 创建会话的UUID
+    }
+}
+```
 {% endswagger-response %}
 {% endswagger %}
+#### Websocket
+...
