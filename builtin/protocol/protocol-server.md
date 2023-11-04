@@ -23,15 +23,57 @@ sequenceDiagram
 
 ## 📝 添加服务器
 
+| 名称      | 默认值              | 附加信息 |
+| ------- | ---------------- | ---- |
+| 协议提供服务器 |                  |      |
+| 连接账户    |                  |      |
+| 显示名称    | Minecraft Server |      |
+| 地址      | 127.0.0.1        |      |
+| 端口      | 19132            |      |
+| 会话附加属性  |                  |      |
+
 ## 🎲 插件配置页
 
 ## 🔧 开发者资源
 
 ### 向插件发送包
+
 ...
 
 ### 添加事件监听
+
 ...
 
 ### 开发协议提供服务器
-...
+
+
+
+{% swagger method="get" path="/info" baseUrl="http://<HOST>:<PORT>" summary="获取协议提供服务器信息" %}
+{% swagger-description %}
+用于获取当前协议提供服务器信息
+{% endswagger-description %}
+
+{% swagger-response status="200: OK" description="" %}
+
+{% endswagger-response %}
+{% endswagger %}
+
+{% swagger method="get" path="/motd" baseUrl="http://<HOST>:<PORT>" summary="获取游戏服务器motd" %}
+{% swagger-description %}
+当MineChat客户端无法直接获取游戏服务器motd时, 将请求该接口尝试交给协议提供服务器来获取游戏服务器的motd并返回
+{% endswagger-description %}
+
+{% swagger-response status="200: OK" description="" %}
+
+{% endswagger-response %}
+{% endswagger %}
+
+{% swagger method="post" path="/session" baseUrl="http://<HOST>:<PORT>" summary="创建会话" %}
+{% swagger-description %}
+只是带上配置尝试创建一个会话, 此时还未与游戏服务器连接
+{% endswagger-description %}
+
+{% swagger-response status="200: OK" description="" %}
+
+{% endswagger-response %}
+{% endswagger %}
