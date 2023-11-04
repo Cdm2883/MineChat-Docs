@@ -22,8 +22,28 @@ sequenceDiagram
 ```
 
 ## 📝 添加服务器
+
+<details>
+
+<summary>储存结构</summary>
+
+{% code fullWidth="false" %}
+```json5
+{
+    host: 'string',
+    port: 'number',
+    account: 'number|null',
+    protocol_server: 'string|null',
+    name: 'string',
+    options: {}
+}
+```
+{% endcode %}
+
+</details>
+
 | 名称      | 默认值              | 附加信息 |
-|---------|------------------|------|
+| ------- | ---------------- | ---- |
 | 协议提供服务器 |                  |      |
 | 连接账户    |                  |      |
 | 显示名称    | Minecraft Server |      |
@@ -37,15 +57,11 @@ sequenceDiagram
 
 ### 向插件发送包
 
-...
-
 ### 添加事件监听
-
-...
 
 ### 开发协议提供服务器
 
-协议提供服务器使用http, 使得可以让开发不局限于Java  
+协议提供服务器使用http, 使得可以让开发不局限于Java\
 你可以自行实现以下接口, 实现你自己的协议提供服务器!
 
 ```mermaid
@@ -134,11 +150,11 @@ sequenceDiagram
 游戏服务器端口
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="offline" type="Boolean" %}
+{% swagger-parameter in="body" name="offline" type="Boolean" required="false" %}
 是否是离线账户 (默认false)
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="username" type="String" %}
+{% swagger-parameter in="body" name="username" type="String" required="false" %}
 用户名 (离线账户必须)
 {% endswagger-parameter %}
 
@@ -156,5 +172,3 @@ sequenceDiagram
 {% endswagger %}
 
 #### Websocket
-
-...
