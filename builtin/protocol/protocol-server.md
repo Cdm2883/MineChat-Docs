@@ -48,13 +48,21 @@ sequenceDiagram
 
 
 
-{% swagger method="get" path="/info" baseUrl="http://<HOST>:<PORT>" summary="获取协议提供服务器信息" %}
+{% swagger expanded="false" method="get" path="/info" baseUrl="http://<HOST>:<PORT>" summary="获取协议提供服务器信息" %}
 {% swagger-description %}
 用于获取当前协议提供服务器信息
 {% endswagger-description %}
 
-{% swagger-response status="200: OK" description="" %}
-
+{% swagger-response status="200: OK" description="成功" %}
+```json5
+{
+    description: string,          // 描述文本
+    backend: string,              // 后端实现
+    online: number,               // 在线连接数
+    bedrock_protocols: [number],  // 支持的基岩版协议列表
+    java_protocols: [number]      // 支持的Java版协议列表
+}
+```
 {% endswagger-response %}
 {% endswagger %}
 
@@ -63,7 +71,15 @@ sequenceDiagram
 当MineChat客户端无法直接获取游戏服务器motd时, 将请求该接口尝试交给协议提供服务器来获取游戏服务器的motd并返回
 {% endswagger-description %}
 
-{% swagger-response status="200: OK" description="" %}
+{% swagger-parameter in="query" name="host" type="String" required="true" %}
+游戏服务器地址
+{% endswagger-parameter %}
+
+{% swagger-parameter in="query" name="port" type="Number" required="true" %}
+游戏服务器端口
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="成功" %}
 
 {% endswagger-response %}
 {% endswagger %}
