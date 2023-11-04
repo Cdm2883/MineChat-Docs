@@ -13,6 +13,7 @@ sequenceDiagram
     participant plugin as 协议提供服务器插件
     participant protocol_server as 协议提供服务器
     participant server as 游戏服务器
+    
     loop over and over again
         plugin ->> protocol_server: packet
         protocol_server ->> server: packet
@@ -29,12 +30,12 @@ sequenceDiagram
 
 ```json5
 {
-    host: 'string',
-    port: 'number',
-    account: 'number|null',
-    protocol_server: 'string|null',
-    name: 'string',
-    options: {}
+    host: 'string',                  // 地址
+    port: 'number',                  // 端口
+    account: 'number|null',          // 连接账户
+    protocol_server: 'string|null',  // 协议提供服务器
+    name: 'string',                  // 显示名称
+    options: {}                      // 会话附加属性
 }
 ```
 
