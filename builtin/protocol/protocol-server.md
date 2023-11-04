@@ -65,7 +65,7 @@ sequenceDiagram
 
 添加监听将会向协议提供服务器服务器发送`type`为`on`的包, `data`为`name`的内容
 
-如果服务器返回包的`type`等于你监听的`type`, 将会触发`callback`返回服务器消息体的`data`内容 (类型为`JsonElement`, 可能为`null`)
+触发`callback`时返回的是服务器消息体的`data`内容 (类型为`JsonElement`, 可能为`null`)
 
 ### 开发协议提供服务器
 
@@ -185,6 +185,72 @@ sequenceDiagram
 
 #### Websocket
 
+在创建会话后, 插件将请求`ws://<HOST>:<PORT>/session/<SESSION ID>`开启WS连接
+
 ##### 客户端包
 
+由客户端发出的包
+
+
+```json5
+// 注册事件
+{
+    type: "on",
+    data: 'string'  // 事件名称
+}
+```
+
+```json5
+// 请求开启游戏服务器连接
+{ type: "connect" }
+```
+
+```json5
+// 发送消息
+{
+    type: '"chat"|"say"',
+    data: 'string'  // 消息内容
+}
+```
+
+```json5
+// 执行命令
+{
+    type: '"command"|"cmd"',
+    data: 'string'  // 命令内容
+}
+```
+
 ##### 服务端包
+
+由服务端发出的包
+
+```json5
+// 正在排队
+{ type: "waiting-connection" }
+```
+
+```json5
+// 正常关闭会话
+{
+    type: "close",
+    data: 'string|null'  // 原因
+}
+```
+
+```json5
+// 输出消息
+{
+    type: "print",
+    data: 'string'  // 内容
+}
+```
+
+```json5
+// 事件回调
+{
+    type: "event",
+    event: 'string',  // 事件名称
+    data: 'any'       // 内容
+}
+```
