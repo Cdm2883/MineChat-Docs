@@ -22,6 +22,14 @@ sequenceDiagram
 ```
 
 ## 📝 添加服务器
+| 名称      | 默认值              | 附加信息 |
+|---------|------------------|------|
+| 协议提供服务器 |                  |      |
+| 连接账户    |                  |      |
+| 显示名称    | Minecraft Server |      |
+| 地址      | 127.0.0.1        |      |
+| 端口      | 19132            |      |
+| 会话附加属性  |                  |      |
 
 ## 🎲 插件配置页
 
@@ -34,6 +42,18 @@ sequenceDiagram
 ...
 
 ### 开发协议提供服务器
+协议提供服务器使用http, 使得可以让开发不局限于Java  
+你可以自行实现以下接口, 实现你自己的协议提供服务器!
+```mermaid
+---
+title: 连接过程
+---
+sequenceDiagram
+    participant plugin as 协议提供服务器插件
+    participant protocol_server as 协议提供服务器
+    participant server as 游戏服务器
+```
+
 #### 基本接口
 {% swagger expanded="false" method="get" path="/info" baseUrl="http://<HOST>:<PORT>" summary="获取协议提供服务器信息" %}
 {% swagger-description %}
@@ -95,5 +115,6 @@ sequenceDiagram
 ```
 {% endswagger-response %}
 {% endswagger %}
+
 #### Websocket
 ...
