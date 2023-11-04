@@ -44,7 +44,6 @@ sequenceDiagram
 
 {% hint style="info" %}
 所有WS包的结构都是:
-
 ```json5
 {
     type: 'string',
@@ -62,7 +61,7 @@ sequenceDiagram
 协议提供服务器使用http, 使得可以让协议插件开发不局限于Jvm语言\
 你可以自行实现以下接口, 实现你自己的协议提供服务器!
 
-你可以参考MineChat官方开发的协议提供服务器
+你可以参考MineChat官方开发的协议提供服务器:
 
 {% @github-files/github-code-block url="https://github.com/Cdm2883/minechat-bedrock-protocol-server" %}
 
