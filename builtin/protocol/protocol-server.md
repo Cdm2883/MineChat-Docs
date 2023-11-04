@@ -43,7 +43,7 @@ sequenceDiagram
 ## 🔧 开发者资源
 
 {% hint style="info" %}
-所有WS包的结构都是:
+所有WS包消息体的结构都是:
 ```json5
 {
     type: 'string',
@@ -54,7 +54,18 @@ sequenceDiagram
 
 ### 向插件发送包
 
+`name`将作为消息体的`type`发送
+
+`obj`如果是`JsonElement`将直接作为`data`发送
+
+`obj`如果是`String`, 将使用`JsonParser.parseString()`尝试将字符串解析为`JsonElement`;
+如果解析失败将会直接将字符串作为`data`发送
+
 ### 添加事件监听
+
+添加监听将会向协议提供服务器服务器发送`type`为`on`的包, `data`为`name`的内容
+
+如果服务器返回包的`type`等于你监听的`type`, 将会触发`callback`返回服务器消息体的`data`内容 (类型为`JsonElement`, 可能为`null`)
 
 ### 开发协议提供服务器
 
