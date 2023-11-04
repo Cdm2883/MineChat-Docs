@@ -21,8 +21,16 @@ sequenceDiagram
     end
 ```
 
-## 📝 添加&修改服务器
+## 📝 添加服务器
 
-## 🔧 插件配置页
+## 🎲 插件配置页
 
-## 🌍 开发协议提供服务器
+## 🔧 开发者资源
+### 向插件发送包
+### 添加事件监听
+### 开发协议提供服务器
+
+[//]: # (### `void sendPacket&#40;String name, Object obj&#41;`)
+[//]: # (### `sendPacket&#40;Ljava/lang/String;Ljava/lang/Object;&#41;V`)
+[//]: # (### `void addOnEvent&#40;String name, Consumer<Object> callback&#41;`)
+[//]: # (### `addOnEvent&#40;Ljava/lang/String;Ljava/util/function/Consumer<Ljava/lang/Object;>;&#41;V`)
