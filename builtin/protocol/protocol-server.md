@@ -22,8 +22,9 @@ sequenceDiagram
 ```
 
 ## 📝 添加服务器
+
 | 名称      | 默认值              | 附加信息 |
-|---------|------------------|------|
+| ------- | ---------------- | ---- |
 | 协议提供服务器 |                  |      |
 | 连接账户    |                  |      |
 | 显示名称    | Minecraft Server |      |
@@ -36,14 +37,18 @@ sequenceDiagram
 ## 🔧 开发者资源
 
 ### 向插件发送包
+
 ...
 
 ### 添加事件监听
+
 ...
 
 ### 开发协议提供服务器
-协议提供服务器使用http, 使得可以让开发不局限于Java  
+
+协议提供服务器使用http, 使得可以让开发不局限于Java\
 你可以自行实现以下接口, 实现你自己的协议提供服务器!
+
 ```mermaid
 ---
 title: 连接过程
@@ -55,7 +60,8 @@ sequenceDiagram
 ```
 
 #### 基本接口
-{% swagger expanded="false" method="get" path="/info" baseUrl="http://<HOST>:<PORT>" summary="获取协议提供服务器信息" %}
+
+{% swagger method="get" path="/info" baseUrl="http://<HOST>:<PORT>" summary="获取协议提供服务器信息" expanded="false" %}
 {% swagger-description %}
 用于获取当前协议提供服务器信息
 {% endswagger-description %}
@@ -103,6 +109,22 @@ sequenceDiagram
 只是带上配置尝试创建一个会话, 此时还未与游戏服务器连接
 {% endswagger-description %}
 
+{% swagger-parameter in="body" name="host" type="String" required="true" %}
+游戏服务器地址
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="port" type="Number" required="true" %}
+游戏服务器端口
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="offline" type="Boolean" %}
+是否是离线账户 (默认false)
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="username" type="String" %}
+用户名 (离线账户必须)
+{% endswagger-parameter %}
+
 {% swagger-response status="200: OK" description="成功" %}
 ```json5
 {
@@ -117,4 +139,5 @@ sequenceDiagram
 {% endswagger %}
 
 #### Websocket
+
 ...
