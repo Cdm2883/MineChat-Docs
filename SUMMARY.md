@@ -15,7 +15,7 @@
 ## 内置插件 <a href="#builtin" id="builtin"></a>
 
 * [协议提供](builtin/protocol/README.md)
-  * [协议提供服务器](builtin/protocol/protocol-server.md)
+  * [协议提供服务器](builtin/protocol/protocol-server-plugin.md)
   * [CloudburstMC/Protocol](builtin/protocol/cloudburstmc-protocol.md)
   * [GeyserMC/MCProtocolLib](builtin/protocol/geysermc-mcprotocollib.md)
   * [调试控制台](builtin/protocol/debug-console.md)
