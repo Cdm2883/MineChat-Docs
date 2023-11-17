@@ -24,6 +24,7 @@
   * [MineChat+](builtin/extension/mine-chat-plus.md)
 * [Service Extension](builtin/service/README.md)
   * [Node.js Runtime](builtin/service/nodejs-service.md)
+  * [Termux Starter](builtin/service/termux-starter.md)
 
 ## PLUGIN DEVELOPMENT <a href="#plugin" id="plugin"></a>
 
