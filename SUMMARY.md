@@ -24,6 +24,7 @@
   * [应用功能扩展](builtin/extension/mine-chat-plus.md)
 * [软件服务](builtin/service/README.md)
   * [Node.js 运行时](builtin/service/nodejs-service.md)
+  * [Termux 启动器](builtin/service/termux-starter.md)
 
 ## 插件开发 <a href="#plugin" id="plugin"></a>
 
